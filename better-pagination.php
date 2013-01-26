@@ -1,7 +1,7 @@
 <?php
 /*
 	* Intelligent pagination using Sitemason XML for item lists
-	*
+
 	* @author     Billy White <billy@sitemason.com>
 	* @copyright  2013 Sitemason, Inc.
 	* @license    http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License, version 2
