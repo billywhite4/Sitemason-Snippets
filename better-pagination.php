@@ -26,8 +26,7 @@
 <?php
 	# some application variables
 	$element = $content_xml->content->element; # set path relative to Content XML
-	$query_string = $element->query;
-	$query_string = preg_replace('/"/', '%22', $query_string);
+	$query_string = preg_replace('/"/', '%22', $element->query);
 
 	# primary function to print individual page links
 	function printItems($element, $i) {
