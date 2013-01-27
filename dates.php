@@ -1,6 +1,6 @@
 <?php
 /*
-	* Date formatting for Sitemason  using Sitemason XML for items
+	* Date formatting using Sitemason XML for items
 
 	* @author     Billy White <billy@sitemason.com>
 	* @copyright  2013 Sitemason, Inc.
@@ -17,7 +17,7 @@
 	$endDate = $item->item_time->end_date_display;
 	$endTime = $item->item_time->end_time_display;
 
-	# print date and time when present, formatted as January 1, 2013 at 8:30am to 5:30pm
+	# print date and time when present, formatted as January 1, 2013 at 8:30am to January 3, 2013 at 5:30pm
 	# reference http://php.net/manual/en/function.date.php for more timestamp formatting options
 	echo '<span>' . date("F j, Y",strtotime($startDate));
 	if ($item->item_time->start_time_display) {
