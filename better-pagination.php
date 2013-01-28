@@ -67,8 +67,8 @@
 	$set_page = $content_xml->content->element->links->list->set_page; # the current page number
 
 	# loops through total number of pages and handles use cases
+	# displays first three and last two page links, with the middle abbreviated with unavailable dots by default
 	for ($i = 1; $i <= $total_pages; $i++) {
-		# displays first three pages and last two pages, with the middle abbreviated out by default
 		if ($i<=3) {
 			printItems($element, $i);
 			if ($i==3 && $set_page==3) {
@@ -76,12 +76,12 @@
 			}
 		}
 		
-		# set unavailable dots after 3rd page position except 4th of 5th
+		# print unavailable dots after 3rd page link except when on 4th or 5th
 		if ($i==3 && $set_page!=4 && $set_page!=5) {
 			unavailable();
 		}
 		
-		# primary logic loop for which page links to display when
+		# primary logic loop defining which page links to display when
 		if ($i<6 && $i==$set_page) { #special consideration for 4th and 5th page links
 			if ($i==4) {
 				printItems($element, 4);
@@ -96,7 +96,7 @@
 				printItems($element, $set_page-1);
 			}
 			printItems($element, $i);
-		} elseif ($set_page>5 && $i>5 && $set_page<($total_pages-2) && $i<($total_pages-2) && $i==$set_page) { # handles all page links above five and less than second-from-last
+		} elseif ($set_page>5 && $i>5 && $set_page<($total_pages-2) && $i<($total_pages-2) && $i==$set_page) { # handles all page links above 5 and less than second-from-last
 			printItems($element, ($set_page-1));
 			printItems($element, $set_page);
 			printItems($element, ($set_page+1));
