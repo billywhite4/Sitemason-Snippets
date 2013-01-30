@@ -1,6 +1,6 @@
 <?php
 /*
-	* Intelligent pagination using Sitemason XML for item lists
+	* Intelligent pagination using Sitemason XML for item lists. Will output format like "<<1 2 3 ... 5 6 7 ... 11 12 >>"
 
 	* @author     Billy White <billy@sitemason.com>
 	* @copyright  2013 Sitemason, Inc.
