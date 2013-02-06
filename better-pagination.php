@@ -63,7 +63,11 @@
 	echo '">&laquo;</a></li>';
 	
 	# useful variables
-	$total_pages = ceil($element->total_items / $element->set); # total number of pages of items
+	if (!$element->total_items) { # if no items, no pages, but can't divide by zero
+		$total_pages = 1;
+	} else {
+		$total_pages = ceil($element->total_items / $element->set); # total number of pages of items
+	}
 	$next_to_last_page = $total_pages - 1; # the number of total pages minus one
 	$set_page = $content_xml->content->element->links->list->set_page; # the current page number
 
