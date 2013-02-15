@@ -1,3 +1,14 @@
+<?php
+/*
+	* Breadcrumbs using Sitemason XML
+
+	* @author     Billy White <billy@sitemason.com>
+	* @copyright  2013 Sitemason, Inc.
+	* @license    http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License, version 2
+	* @since      File available since 2/15/2013
+*/
+?>
+
 <div class="breadcrumbs">
 	<a href="/">Home</a> > 
 	<?php
