@@ -5,6 +5,8 @@
 		if ($item->getThumbnailImageSize()) {
 			$thumbnail = $item->getThumbnailImageSize();
 			$url = $thumbnail->getUrl();
+		} else {
+			$url = null;
 		}
 
 		$itemDetails[] = array(
